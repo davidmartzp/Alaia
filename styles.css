@@ -23,6 +23,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Bloqueo de scroll cuando el menú móvil está abierto */
+body.menu-open {
+    overflow: hidden;
+}
+
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
@@ -181,30 +186,65 @@ header {
     display: flex;
 }
 
-.mobile-nav .mobile-menu li {
-    margin: 0.8rem 0;
-    text-align: center;
-    list-style: none;
-}
-
-.mobile-nav .mobile-menu a {
-    text-decoration: none;
-    color: var(--color-text);
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.mobile-nav .mobile-menu::before {
-    content: '';
-    display: block;
-    background-image: url('Logo.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem auto;
-    border-radius: 10px;
+/* Mobile navigation enhancements - Updated layout */
+@media (max-width: 768px) {
+    /* Transparent header */
+    header {
+        background-color: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: none;
+        border-bottom: none;
+        padding: 1rem;
+    }
+    
+    /* Mobile logo hiding */
+    .mobile-nav .mobile-logo {
+        display: none;
+    }
+    
+    /* Floating menu toggle with white background */
+    .mobile-nav .mobile-menu-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1005;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    
+    /* Mobile menu styles */
+    .mobile-nav .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 80px; /* Space for the floating button */
+        overflow-y: auto;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(249, 249, 249, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 1004;
+        transition: opacity 0.3s ease; /* Smooth transition */
+        opacity: 0;
+    }
+    
+    .mobile-nav .mobile-menu.show-mobile-menu {
+        display: flex;
+        opacity: 1;
+    }
 }
 
 /* Very small screen adjustments */

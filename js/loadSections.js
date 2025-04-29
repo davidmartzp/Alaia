@@ -105,10 +105,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+        const body = document.body;
 
         if (mobileMenuToggle) {
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('show-mobile-menu');
+                // Añadir/quitar clase al body para prevenir scroll cuando el menú está abierto
+                body.classList.toggle('menu-open');
+                
+                // Cambiar el ícono del botón dependiendo si el menú está abierto o cerrado
+                const menuIcon = mobileMenuToggle.querySelector('i');
+                if (mobileMenu.classList.contains('show-mobile-menu')) {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                } else {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
             });
         }
         
@@ -117,7 +130,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     
+                    // Cerrar el menú
                     mobileMenu.classList.remove('show-mobile-menu');
+                    body.classList.remove('menu-open');
+                    
+                    // Restaurar icono
+                    const menuIcon = mobileMenuToggle.querySelector('i');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
                     
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
