@@ -1,0 +1,117 @@
+/* Desktop Styles */
+@media (min-width: 769px) {
+    /* Force header to have sufficient width */
+    header {
+        width: 100vw;
+        max-width: 100%;
+        display: block;
+        position: fixed;
+    }
+
+    /* Container takes up full width with position relative for absolute positioning */
+    header .container {
+        position: relative;
+        width: 100%;
+        padding: 0;
+    }
+    
+    /* Force desktop nav to use entire width */
+    .desktop-nav {
+        width: 100%;
+        position: static;
+        display: block;
+    }
+    
+    /* Absolutely position logo extremely left */
+    .desktop-nav .logo {
+        position: absolute !important;
+        left: -170px !important;
+        top: -30px !important;
+        z-index: 9999 !important;
+        transition: transform 0.5s ease, top 0.3s ease;
+    }
+    
+    /* Enhanced styling for desktop nav links */
+    .desktop-nav .nav-links {
+        position: absolute !important;
+        right: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        display: flex;
+        justify-content: flex-end !important;
+        width: auto !important;
+        text-align: right !important;
+    }
+    
+    .desktop-nav .nav-links li {
+        margin: 0 0 0 2rem;
+        position: relative;
+    }
+    
+    .desktop-nav .nav-links a {
+        text-decoration: none;
+        color: var(--color-text);
+        font-weight: 600;
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    
+    /* Stylish underline effect on hover */
+    .desktop-nav .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--thread-color-1), var(--thread-color-3));
+        transition: width 0.3s ease;
+    }
+    
+    .desktop-nav .nav-links a:hover {
+        color: var(--thread-color-1);
+    }
+    
+    .desktop-nav .nav-links a:hover::after {
+        width: 100%;
+    }
+    
+    /* Active state styling */
+    .desktop-nav .nav-links .active a {
+        color: var(--thread-color-1);
+    }
+    
+    .desktop-nav .nav-links .active a::after {
+        width: 100%;
+        opacity: 1;
+    }
+    
+    /* Desktop logo styles - smoother transition */
+    .desktop-nav .logo-img {
+        height: 150px;
+        border-radius: 15px;
+        border: 5px solid var(--color-light);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        transition: height 0.5s ease, border-width 0.5s ease;
+    }
+    
+    /* More subtle scroll effect */
+    .header-scrolled .desktop-nav .logo {
+        left: -170px !important;
+        top: -20px !important;
+        transform: scale(0.8);
+    }
+    
+    .header-scrolled .desktop-nav .logo-img {
+        height: 110px;
+        border-width: 3px;
+    }
+
+    /* Hide mobile elements on desktop */
+    .mobile-nav {
+        display: none !important;
+    }
+}

@@ -1,0 +1,34 @@
+/* Main CSS file that imports all modules */
+
+/* Base styles */
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+@import 'base/utilities.css';
+
+/* Components */
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/separators.css';
+@import 'components/sliders.css'; /* Nuevos estilos para sliders */
+
+/* Layout */
+@import 'layout/header.css';
+@import 'layout/navigation.css';
+@import 'layout/footer.css';
+
+/* Sections */
+@import 'sections/hero.css';
+@import 'sections/about.css';
+@import 'sections/video.css'; /* Nueva sección de video */
+@import 'sections/projects.css';
+@import 'sections/news.css';
+@import 'sections/contact.css';
+
+/* Responsive */
+@import 'responsive/desktop.css';
+@import 'responsive/tablet.css';
+@import 'responsive/mobile.css';
+
+/* Animations */
+@import 'animations/effects.css';

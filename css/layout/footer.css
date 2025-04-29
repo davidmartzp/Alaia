@@ -1,0 +1,56 @@
+/* Footer Styles */
+footer {
+    background-color: var(--color-text);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-light);
+    color: var(--color-text);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--thread-color-1);
+    color: white;
+    transform: translateY(-3px);
+}

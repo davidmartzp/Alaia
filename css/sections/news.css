@@ -1,0 +1,11 @@
+/* News Section */
+.news {
+    background-color: var(--color-light);
+    padding-top: 6rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}

@@ -1,0 +1,210 @@
+/* Mobile Styles (Up to 768px) */
+@media (max-width: 768px) {
+    /* Hide desktop navigation */
+    .desktop-nav {
+        display: none !important;
+    }
+    
+    /* Show mobile navigation */
+    .mobile-nav {
+        display: flex !important;
+    }
+    
+    /* Mobile navigation styles */
+    header {
+        background-color: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: none;
+        border-bottom: none;
+        padding: 1rem;
+        position: absolute;
+    }
+    
+    .mobile-nav .mobile-logo {
+        display: none;
+    }
+    
+    .mobile-nav .mobile-menu-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1005;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+    .mobile-nav .mobile-menu {
+        top: 0;
+        padding-top: 80px;
+        transition: none;
+    }
+    
+    /* Hero section adjustments */
+    .slogan {
+        font-size: 3rem;
+    }
+    
+    .slogan::before, 
+    .slogan::after {
+        font-size: 4.5rem;
+    }
+    
+    .slogan-indent {
+        margin-left: 20px;
+    }
+    
+    .slogan-indent-2 {
+        margin-left: 40px;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    /* About section adjustments */
+    .mission-vision-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-image img {
+        height: 350px;
+    }
+    
+    /* Projects section adjustments */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* News section adjustments */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact section adjustments */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+        min-height: 350px;
+    }
+    
+    .contact-card {
+        padding: 1.2rem;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        margin-right: 1rem;
+    }
+    
+    .contact-details h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Separator adjustments */
+    .wave-separator, .zigzag-separator, .curve-separator, 
+    .thread-pattern-separator, .ojo-de-dios-separator {
+        height: 80px;
+    }
+
+    .wave-separator svg, .curve-separator svg {
+        height: 80px;
+    }
+    
+    /* Very small screens - additional adjustments */
+    @media (max-width: 480px) {
+        .mobile-nav .mobile-menu-toggle i {
+            width: 45px;
+            height: 45px;
+            font-size: 1.5rem;
+        }
+        
+        .mobile-nav .mobile-menu-toggle .menu-text {
+            font-size: 1rem;
+        }
+        
+        .mobile-nav .mobile-menu::before {
+            width: 120px;
+            height: 120px;
+        }
+        
+        .slogan {
+            font-size: 2.4rem;
+        }
+        
+        .slogan::before, 
+        .slogan::after {
+            font-size: 3.5rem;
+        }
+        
+        .slogan-indent {
+            margin-left: 15px;
+        }
+        
+        .slogan-indent-2 {
+            margin-left: 30px;
+        }
+        
+        .hero p {
+            font-size: 1rem;
+            padding-left: 15px;
+        }
+        
+        .about-intro {
+            font-size: 1rem;
+        }
+        
+        .mission-box, .vision-box {
+            padding: 2rem 1.5rem;
+        }
+        
+        .box-icon {
+            font-size: 2rem;
+        }
+        
+        .mission-box h3, .vision-box h3 {
+            font-size: 1.6rem;
+        }
+        
+        .mission-image img, .vision-image img {
+            height: 140px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.2rem;
+        }
+        
+        .social-icons a {
+            width: 35px;
+            height: 35px;
+            font-size: 1rem;
+        }
+        
+        .map-container {
+            min-height: 250px;
+        }
+        
+        .wave-separator, .zigzag-separator, .curve-separator, 
+        .thread-pattern-separator, .ojo-de-dios-separator {
+            height: 60px;
+        }
+
+        .wave-separator svg, .curve-separator svg {
+            height: 60px;
+        }
+    }
+}

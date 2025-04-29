@@ -1,0 +1,136 @@
+/* About Section */
+.about {
+    background-color: var(--color-light);
+    position: relative;
+    padding-top: 6rem;
+}
+
+.about-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.about-intro::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--thread-color-1), var(--thread-color-3));
+    border-radius: 3px;
+}
+
+/* Mission and Vision Boxes */
+.mission-vision-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0 4rem;
+}
+
+.mission-box, .vision-box {
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: auto;
+}
+
+.mission-box::before, .vision-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.mission-box::before {
+    background: linear-gradient(90deg, var(--thread-color-1), var(--thread-color-2));
+}
+
+.vision-box::before {
+    background: linear-gradient(90deg, var(--thread-color-3), var(--thread-color-4));
+}
+
+.box-icon {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #888;
+    text-align: center;
+}
+
+.mission-box .box-icon {
+    color: var(--thread-color-1);
+}
+
+.vision-box .box-icon {
+    color: var(--thread-color-3);
+}
+
+.mission-box h3, .vision-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.mission-box p, .vision-box p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.mission-box p:last-child, .vision-box p:last-child {
+    margin-bottom: 0;
+}
+
+.mission-box:hover, .vision-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* Mission and Vision Images */
+.mission-image, .vision-image {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.mission-image::before, .vision-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0));
+    z-index: 1;
+}
+
+.mission-image img, .vision-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.mission-box:hover .mission-image img,
+.vision-box:hover .vision-image img {
+    transform: scale(1.05);
+}

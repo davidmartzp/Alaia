@@ -1,0 +1,17 @@
+/* Buttons */
+.btn {
+    background-color: var(--thread-color-1);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: black;
+}

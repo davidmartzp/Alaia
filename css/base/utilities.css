@@ -1,0 +1,82 @@
+/* Utilities */
+section {
+    position: relative;
+    padding: 6rem 0 7rem;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.thread-decoration {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.thread-top-right {
+    top: -50px;
+    right: -50px;
+    background: radial-gradient(circle, transparent 20%, var(--thread-color-1) 22%, transparent 23%, transparent 30%, var(--thread-color-2) 31%, transparent 32%, transparent 40%, var(--thread-color-3) 41%, transparent 42%);
+    background-size: 30px 30px;
+    transform: rotate(30deg);
+    opacity: 0.2;
+}
+
+.thread-bottom-left {
+    bottom: -50px;
+    left: -50px;
+    background: radial-gradient(circle, transparent 20%, var(--thread-color-4) 22%, transparent 23%, transparent 30%, var(--thread-color-1) 31%, transparent 32%, transparent 40%, var(--thread-color-2) 41%, transparent 42%);
+    background-size: 30px 30px;
+    transform: rotate(-30deg);
+    opacity: 0.2;
+}
+
+.thread-accent {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+.thread-right {
+    right: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--thread-color-1),
+        var(--thread-color-1) 2px,
+        transparent 2px,
+        transparent 10px,
+        var(--thread-color-2) 10px,
+        var(--thread-color-2) 12px,
+        transparent 12px,
+        transparent 20px
+    );
+}
+
+.thread-left {
+    left: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--thread-color-3),
+        var(--thread-color-3) 2px,
+        transparent 2px,
+        transparent 10px,
+        var(--thread-color-4) 10px,
+        var(--thread-color-4) 12px,
+        transparent 12px,
+        transparent 20px
+    );
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

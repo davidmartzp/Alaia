@@ -1,0 +1,119 @@
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 90px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--thread-color-1),
+        var(--thread-color-1) 25%,
+        var(--thread-color-2) 25%,
+        var(--thread-color-2) 50%,
+        var(--thread-color-3) 50%,
+        var(--thread-color-3) 75%,
+        var(--thread-color-4) 75%,
+        var(--thread-color-4) 100%
+    );
+    opacity: 0.6;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.slogan {
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.slogan::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: -20px;
+    font-size: 6rem;
+    color: rgba(229, 115, 115, 0.2);
+    font-family: 'Playfair Display', serif;
+}
+
+.slogan::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: -60px;
+    font-size: 6rem;
+    color: rgba(229, 115, 115, 0.2);
+    font-family: 'Playfair Display', serif;
+}
+
+.slogan-line {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.slogan-highlight {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.slogan-highlight::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(255, 183, 77, 0.3);
+    z-index: -1;
+}
+
+.slogan-indent {
+    margin-left: 30px;
+}
+
+.slogan-indent-2 {
+    margin-left: 60px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--color-accent);
+}
