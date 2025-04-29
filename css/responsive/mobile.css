@@ -22,7 +22,8 @@
     }
     
     .mobile-nav .mobile-logo {
-        display: none;
+        display: block; /* Mostrar el logo en móvil */
+        z-index: 1006; /* Asegurar que esté por encima de otros elementos */
     }
     
     .mobile-nav .mobile-menu-toggle {

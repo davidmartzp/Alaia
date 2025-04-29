@@ -198,9 +198,22 @@ header {
         padding: 1rem;
     }
     
-    /* Mobile logo hiding */
+    /* Mobile logo showing */
     .mobile-nav .mobile-logo {
-        display: none;
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1005;
+    }
+    
+    .mobile-nav .mobile-logo-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
     
     /* Floating menu toggle with white background */

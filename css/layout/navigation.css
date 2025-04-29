@@ -68,10 +68,24 @@
     width: 100%;
 }
 
+/* Mobile logo */
 .mobile-nav .mobile-logo {
     height: 50px;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1005;
+}
+
+.mobile-nav .mobile-logo-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 .mobile-nav .mobile-logo-img {
@@ -143,7 +157,7 @@
 .mobile-nav .mobile-menu::before {
     content: '';
     display: block;
-    background-image: url('../../Logo.jpg');
+    background-image: url('../../../public/images/Logo.jpg'); /* Ruta corregida */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
